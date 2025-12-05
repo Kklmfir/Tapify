@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapify</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Tapify Dashboard</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Cari perintah...">
+        <button id="voiceBtn">🎤</button>
+    </div>
+</header>
+
+<main>
+    <section id="commands-section">
+        <h2>Daftar Perintah</h2>
+        <div id="commands-list"></div>
+    </section>
+
+    <section id="add-section">
+        <h2>Tambah Perintah Baru</h2>
+        <input id="cmd-name" placeholder="Nama perintah">
+        <select id="cmd-type">
+            <option value="wifi_on">Nyalakan WiFi</option>
+            <option value="wifi_off">Matikan WiFi</option>
+            <option value="bluetooth_on">Nyalakan Bluetooth</option>
+            <option value="bluetooth_off">Matikan Bluetooth</option>
+            <option value="open_app">Buka Aplikasi</option>
+            <option value="send_message">Kirim Pesan</option>
+        </select>
+        <button onclick="addCustomCommand()">Tambah</button>
+    </section>
+</main>
+
+<script src="assets/js/api.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/voice.js"></script>
+</body>
+</html>
